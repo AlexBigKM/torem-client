@@ -31,7 +31,7 @@ function buildConfig(_env, argv) {
                     },
                 },
                 {
-                    test: /\.(scss|css)$/,
+                    test: /\.css$/,
                     use: [
                         "style-loader",
                         {

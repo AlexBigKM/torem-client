@@ -1,14 +1,15 @@
-@import-normalize;
+/*@import-normalize;*/
 
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
 }
 
 @font-face {
-  font-family: "Roboto";
-  src: url(./assets/fonts/Roboto-Regular.woff2) format('woff2'),
-  url(./assets/fonts/Roboto-Regular.woff) format('woff');
+  font-family: Roboto;
+  src: url(/src/assets/fonts/Roboto-Regular.woff2) format('woff2'),
+  url(/src/assets/fonts/Roboto-Regular.woff) format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -16,8 +17,8 @@ body {
 
 @font-face {
   font-family: 'Roboto Light';
-  src: url(./assets/fonts/Roboto-Light.woff2) format('woff2'),
-  url(./assets/fonts/Roboto-Light.woff) format('woff');
+  src: url(/src/assets/fonts/Roboto-Light.woff2) format('woff2'),
+  url(/src/assets/fonts/Roboto-Light.woff) format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -25,8 +26,8 @@ body {
 
 @font-face {
   font-family: 'Roboto Thin';
-  src: url(./assets/fonts/Roboto-Thin.woff2) format('woff2'),
-  url(./assets/fonts/Roboto-Thin.woff) format('woff');
+  src: url(/src/assets/fonts/Roboto-Thin.woff2) format('woff2'),
+  url(/src/assets/fonts/Roboto-Thin.woff) format('woff');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -34,8 +35,8 @@ body {
 
 @font-face {
   font-family: 'Nunito';
-  src: url(./assets/fonts/Nunito-Regular.woff2) format('woff2'),
-  url(./assets/fonts/Nunito-Regular.woff) format('woff');
+  src: url(/src/assets/fonts/Nunito-Regular.woff2) format('woff2'),
+  url(/src/assets/fonts/Nunito-Regular.woff) format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
