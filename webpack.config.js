@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 function buildConfig(_env, argv) {
     const isProduction = true;
@@ -31,7 +32,7 @@ function buildConfig(_env, argv) {
                     },
                 },
                 {
-                    test: /\.css$/,
+                    test: /\.(scss|css)$/,
                     use: [
                         "style-loader",
                         {
@@ -90,11 +91,11 @@ function buildConfig(_env, argv) {
             }),
             // new CopyWebpackPlugin({
             //     patterns: [
-            //         { from: 'src/common/index.css', to: 'index.css' },
-            //         { from: 'public/favicon.ico', to: 'favicon.ico' },
-            //         { from: 'public/manifest.json', to: 'manifest.json' },
-            //         { from: 'public/logo192.png', to: 'logo192.png' },
-            //         { from: 'public/logo512.png', to: 'logo512.png' },
+            //         { from: 'src/index.css', to: 'index.css' },
+            //         // { from: 'public/favicon.ico', to: 'favicon.ico' },
+            //         // { from: 'public/manifest.json', to: 'manifest.json' },
+            //         // { from: 'public/logo192.png', to: 'logo192.png' },
+            //         // { from: 'public/logo512.png', to: 'logo512.png' },
             //     ],
             // }),
         ].filter(Boolean),
