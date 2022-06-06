@@ -1,0 +1,43 @@
+.navBar {
+  width: 100%;
+  position: absolute;
+}
+
+.navBarContainer {
+  position: relative;
+}
+
+.navbarWrapper {
+  width: 100%;
+  top: 66px;
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  justify-content: space-between;
+}
+
+.navbarMenuList {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 60px;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.navbarMenuList > li {
+  cursor: pointer;
+}
+
+.navbarMenuList > li:nth-child(2) {
+  margin-left: 62px;
+  margin-right: 53px;
+  display: flex;
+  align-items: center;
+}
+
+.navbarMenuListItemImg {
+  margin-left: 8px;
+}

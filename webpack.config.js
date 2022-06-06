@@ -41,7 +41,7 @@ function buildConfig(_env, argv) {
                                 url: true,
                                 modules: true,
                             },
-                        }, "postcss-loader", "sass-loader"
+                        }, "postcss-loader", "sass-loader",
                     ],
                 },
                 {
@@ -57,12 +57,12 @@ function buildConfig(_env, argv) {
                 {
                     test: /\.(eot|otf|ttf|woff|woff2)$/,
                     loader: require.resolve("file-loader"),
-                    options: { name: "assets/fonts/[name].[ext]" },
+                    options: { filename: "assets/fonts/[name][ext]" },
                 },
                 {
                     test: /\.mp4$/,
                     loader: require.resolve("file-loader"),
-                    options: { name: "assets/video/[name].[ext]" },
+                    options: { filename: "assets/video/[name][ext]" },
                 },
             ],
         },
