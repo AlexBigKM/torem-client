@@ -2,7 +2,7 @@ import React from 'react';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import logo from '../../assets/icons/footer-logo.svg';
 
-import styles from './style.scss';
+import styles from './style.module.css';
 import Headers from "../Headers/Headers";
 
 const Footer = () => {

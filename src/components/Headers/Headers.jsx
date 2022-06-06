@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames  from 'classnames';
-import styles from './style.scss';
+import styles from './style.module.css';
 
 const Headers = ({headerStyle, children}) => {
     return (

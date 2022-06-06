@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import arrow from '../../assets/icons/arrow.svg';
-import styles from './style.scss';
+import styles from './style.module.css';
 
 const LinkButton = ({ linkButtonStyle }) => {
     return (

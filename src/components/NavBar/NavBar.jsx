@@ -4,7 +4,7 @@ import dropDownArrow from '../../assets/icons/dropdown-arrow.svg';
 import ContentContainer from "../ContentContainer/ContentContainer";
 import {motion} from "framer-motion";
 
-import styles from './style.scss';
+import styles from './style.module.css';
 
 const fadeInDown = {
     initial: {
