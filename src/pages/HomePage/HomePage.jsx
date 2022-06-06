@@ -29,7 +29,7 @@ const HomePage = () => {
             <section className={styles.homePageHero} style={sectionStyle}>
                 <Headers headerStyle={styles.homePageSmallHeader} children={'Information technology'} />
                 <Headers headerStyle={styles.homePageHeader} children={'Torem'} />
-                <LinkButton linkButtonStyle={styles.homePageLinkButton}/>
+                <LinkButton linkButtonStyle={styles.homePageLinkButton} children={'Contact us'}/>
             </section>
             <section className={styles.homePageAboutUs}>
                 <img className={styles.homePageAboutUsImg} src={pin} alt={'Pin'}/>
@@ -56,6 +56,7 @@ const HomePage = () => {
                     alt={'speaker'}
                     title={'Startup to Enterprise Solutions'}
                     text={'It is a long established fact that a reader will be...'}
+                    buttonText={'Learn more'}
                 />
                 <Card
                     cardWrapperStyle={styles.homePageCard}
@@ -63,6 +64,7 @@ const HomePage = () => {
                     alt={'gear'}
                     title={'Disruptive Technologies'}
                     text={'It is a long established fact that a reader will be...'}
+                    buttonText={'Learn more'}
                 />
                 <Card
                     cardWrapperStyle={styles.homePageCard}
@@ -70,6 +72,7 @@ const HomePage = () => {
                     alt={'docs'}
                     title={'Automated & Manual Quality Assurance'}
                     text={'It is a long established fact that a reader will be...'}
+                    buttonText={'Learn more'}
                 />
                 <Card
                     cardWrapperStyle={styles.homePageCard}
@@ -77,6 +80,7 @@ const HomePage = () => {
                     alt={'lock'}
                     title={'Privacy Focussed'}
                     text={'It is a long established fact that a reader will be...'}
+                    buttonText={'Learn more'}
                 />
             </section>
         </>
