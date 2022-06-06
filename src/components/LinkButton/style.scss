@@ -1,7 +1,32 @@
 .linkButtonWrapper {
   max-width: 208px;
+  max-height: 45px;
+  width: 100%;
+  height: 100%;
+  padding-left: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto;
   border: 3px solid #831E1E;
-  font-size: 20px;
-  font-family: 'Nunito';
+  font-size: 16px;
   color: white;
+  line-height: 19px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.linkButtonWrapper:hover {
+  background-color: #B4286B;
+  border-color: #B4286B;
+}
+
+.linkButtonArrowWrapper {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #B4286B;
 }

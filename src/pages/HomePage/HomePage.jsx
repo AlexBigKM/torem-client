@@ -6,6 +6,9 @@ import styles from './style.scss';
 
 const sectionStyle = {
     height: "100vh",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
     backgroundImage: `url(${backgroundImg})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
@@ -15,8 +18,9 @@ const sectionStyle = {
 const HomePage = () => {
     return (
         <div className={styles.homePageWrapper} style={sectionStyle}>
+            <Headers headerStyle={styles.homePageSmallHeader} children={'Information technology'} />
             <Headers headerStyle={styles.homePageHeader} children={'Torem'} />
-            <LinkButton />
+            <LinkButton linkButtonStyle={styles.homePageLinkButton}  />
         </div>
     );
 };
