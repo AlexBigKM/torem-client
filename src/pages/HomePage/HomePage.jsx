@@ -9,6 +9,7 @@ import LinkButton from "../../components/LinkButton/LinkButton";
 import Headers from "../../components/Headers/Headers";
 import ContentContainer from "../../components/ContentContainer/ContentContainer";
 import Card from "../../components/Card/Card";
+import LandingSlider from "../../components/LandingSlider/LandingSlider";
 
 import styles from './style.module.css';
 
@@ -83,6 +84,7 @@ const HomePage = () => {
                     buttonText={'Learn more'}
                 />
             </section>
+            <LandingSlider />
         </>
     );
 };
