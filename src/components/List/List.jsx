@@ -1,15 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import styles from './style.module.css';
 
-const List = ({title, children}) => {
-    const [items, setItems] = useState([]);
+const List = ({ title, items = [] }) => {
     return (
         <div className={styles.listWrapper}>
-            <div>{title}</div>
+            <div className={styles.listTitle}>{title}</div>
             <ul className={styles.list}>
-                {items.map(item => (
-                    {children}
+                {items.map((item, index) => (
+                    <li key={index}>{item}</li>
                 ))}
             </ul>
         </div>

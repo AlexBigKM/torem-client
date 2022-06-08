@@ -1,0 +1,56 @@
+.landingSlider {
+    height: 659px;
+    position: relative;
+}
+
+.landingSliderArrowBtnLeft {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 112px;
+    left: 48%;
+    transform: translateX(-48%);
+    border-radius: 50%;
+    border: 2px solid #D6D6D6;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 5;
+}
+
+.landingSliderArrowBtnRight {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 112px;
+    right: 48%;
+    transform: translateX(-48%) rotate(180deg);
+    border-radius: 50%;
+    border: 2px solid #D6D6D6;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    z-index: 5;
+}
+
+.landingSliderArrowBtnLeft:hover {
+    border: 2px solid #B4286B;
+}
+
+.landingSliderArrowBtnRight:hover {
+    border: 2px solid #B4286B;
+}
+
+.landingSliderArrowBtnLeft > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landingSliderArrowBtnRight > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -17,6 +17,36 @@ ul, li {
   list-style: none;
 }
 
+.slick-slide {
+  height: 659px !important;
+}
+
+/*.slick-arrow {*/
+/*  width: 48px !important;*/
+/*  height: 48px !important;*/
+/*  position: absolute;*/
+/*  bottom: 112px !important;*/
+/*  border: 2px solid #D6D6D6;*/
+/*}*/
+
+/*.slick-next {*/
+/*  position: absolute;*/
+/*  right: 48%;*/
+/*  bottom: 112px;*/
+/*  transform: rotate(180deg) translateX(-48%);*/
+/*}*/
+
+/*.slick-prev {*/
+/*  position: absolute;*/
+/*  bottom: 112px;*/
+/*  left: 48%;*/
+/*  transform: translateX(-48%);*/
+/*}*/
+
+/*.slick-arrow:hover {*/
+/*  border: 2px solid #B4286B;*/
+/*}*/
+
 @font-face {
   font-family: 'Roboto';
   src: url(./assets/fonts/Roboto-Regular.woff2) format('woff2'),
