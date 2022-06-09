@@ -1,15 +1,15 @@
 import React from 'react';
 import backgroundImg from '../../assets/images/background.jpg';
-import pin from '../../assets/icons/pin.svg';
+import webDesignBg from '../../assets/images/webdesign-bg.jpg';
 import speaker from '../../assets/icons/speaker.svg';
 import gear from '../../assets/icons/gear.svg';
 import docs from '../../assets/icons/docs.svg';
 import lock from '../../assets/icons/lock.svg';
 import LinkButton from "../../components/LinkButton/LinkButton";
 import Headers from "../../components/Headers/Headers";
-import ContentContainer from "../../components/ContentContainer/ContentContainer";
 import Card from "../../components/Card/Card";
 import LandingSlider from "../../components/LandingSlider/LandingSlider";
+import AboutSection from "../../components/AboutSection/AboutSection";
 
 import styles from './style.module.css';
 
@@ -32,24 +32,29 @@ const HomePage = () => {
                 <Headers headerStyle={styles.homePageHeader} children={'Torem'} />
                 <LinkButton linkButtonStyle={styles.homePageLinkButton} children={'Contact us'}/>
             </section>
-            <section className={styles.homePageAboutUs}>
-                <img className={styles.homePageAboutUsImg} src={pin} alt={'Pin'}/>
-                <ContentContainer>
-                    <Headers headerStyle={styles.homePageAboutUsHeader} children={'About us'} />
-                    <div className={styles.homePageAboutUsTextWrapper}>
-                        <div className={styles.homePageAboutUsText}>
-                            It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters
-                        </div>
-                        <div className={styles.homePageAboutUsText}>
-                            It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters
-                        </div>
-                    </div>
-                </ContentContainer>
-            </section>
+            {/*<section className={styles.homePageAboutUs}>*/}
+            {/*    <img className={styles.homePageAboutUsImg} src={pin} alt={'Pin'}/>*/}
+            {/*    <ContentContainer>*/}
+            {/*        <Headers headerStyle={styles.homePageAboutUsHeader} children={'About us'} />*/}
+            {/*        <div className={styles.homePageAboutUsTextWrapper}>*/}
+            {/*            <div className={styles.homePageAboutUsText}>*/}
+            {/*                It is a long established fact that a reader will be distracted by the readable content of a*/}
+            {/*                page when looking at its layout. The point of using Lorem Ipsum is that it has a*/}
+            {/*                more-or-less normal distribution of letters*/}
+            {/*            </div>*/}
+            {/*            <div className={styles.homePageAboutUsText}>*/}
+            {/*                It is a long established fact that a reader will be distracted by the readable content of a*/}
+            {/*                page when looking at its layout. The point of using Lorem Ipsum is that it has a*/}
+            {/*                more-or-less normal distribution of letters*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </ContentContainer>*/}
+            {/*</section>*/}
+            <AboutSection
+                sectionTitle={'About us'}
+                columnOneText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
+                columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
+            />
             <section className={styles.homePageCardsWrapper}>
                 <Card
                     cardWrapperStyle={styles.homePageCard}
@@ -85,6 +90,14 @@ const HomePage = () => {
                 />
             </section>
             <LandingSlider />
+            <AboutSection
+                backgroundImage={`url(${webDesignBg})`}
+                headerStyle={styles.webDesignHeaderStyle}
+                textStyle={styles.webDesignTextStyle}
+                sectionTitle={'web design'}
+                columnOneText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
+                columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
+            />
         </>
     );
 };

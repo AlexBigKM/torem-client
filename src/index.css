@@ -14,11 +14,21 @@ ul, li {
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style: none;
 }
 
 .slick-slide {
   height: 659px !important;
+  /*display: flex !important;*/
+}
+
+.slick-track {
+  display: flex !important;
+}
+.slick-track .slick-slide {
+  display: flex !important;
+  height: auto;
+  padding-top: 149px;
+  justify-content: center;
 }
 
 /*.slick-arrow {*/

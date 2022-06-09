@@ -22,42 +22,14 @@
   margin: 65px auto 0;
 }
 
-.homePageAboutUs {
-  background-color: #ffffff;
-  padding: 112px 0 113px;
-  position: relative;
-}
-
-.homePageAboutUsImg {
-  position: absolute;
-  top: 130px;
-}
-
-.homePageAboutUsHeader {
-  font-family: 'Roboto Light';
-  font-size: 48px;
-  line-height: 56px;
-  color: #000000;
-}
-
-.homePageAboutUsTextWrapper {
-  display: flex;
-  margin-top: 44px;
-  column-gap: 147px;
-  font-family: 'Roboto Light';
-  font-size: 16px;
-  line-height: 40px;
-  color: #000000;
-}
-
-.homePageAboutUsText {
-  width: 446px;
-}
-
 .homePageCardsWrapper {
   display: flex;
 }
 
-/*.homePageCard:nth-child(2) {*/
-/*  border-left: ;*/
-/*}*/
+.webDesignHeaderStyle {
+  color: #ffffff;
+}
+
+.webDesignTextStyle {
+  color: #ffffff;
+}

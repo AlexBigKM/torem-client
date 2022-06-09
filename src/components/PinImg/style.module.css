@@ -1,0 +1,20 @@
+.pinImgWrapper {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pinImgRect {
+    width: 1px;
+    height: 89px;
+    background-color: #7392FF;
+}
+
+.pinImgCircle {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #6377FF 0%, #00C2FF 100%);
+    transform: rotate(-180deg);
+}

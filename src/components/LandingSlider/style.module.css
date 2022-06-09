@@ -3,13 +3,51 @@
     position: relative;
 }
 
+.landingSliderSvgWrapper {
+    display: flex;
+    width: 182px;
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.landingSliderImgLongPin {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    transform: translateX(-45%);
+}
+
+.landingSliderImgMedPin {
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.landingSliderImgShortPin {
+    position: absolute;
+    top: 0;
+    left: 57%;
+    transform: translateX(-57%);
+}
+
+landingSliderImgLongPinTwo {
+    position: absolute;
+    top: 0;
+    right: 45%;
+    transform: translateX(-45%);
+}
+
 .landingSliderArrowBtnLeft {
     width: 48px;
     height: 48px;
     position: absolute;
     bottom: 112px;
-    left: 48%;
-    transform: translateX(-48%);
+    left: 45%;
+    transform: translateX(-45%);
     border-radius: 50%;
     border: 2px solid #D6D6D6;
     background-color: transparent;
@@ -23,8 +61,8 @@
     height: 48px;
     position: absolute;
     bottom: 112px;
-    right: 48%;
-    transform: translateX(-48%) rotate(180deg);
+    right: 44%;
+    transform: translateX(-44%) rotate(180deg);
     border-radius: 50%;
     border: 2px solid #D6D6D6;
     background-color: transparent;

@@ -29,6 +29,7 @@
 
 .navbarMenuList > li {
   cursor: pointer;
+  list-style: none;
 }
 
 .navbarMenuList > li:nth-child(2) {

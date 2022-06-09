@@ -1,10 +1,11 @@
 import React from 'react';
 import Slider from 'react-slick';
 import ContentContainer from "../ContentContainer/ContentContainer";
-import List from '../List/List';
+import SliderContent from '../SliderContent/SliderContent';
 import arrow from '../../assets/icons/slider-arrow.svg';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import PinImg from "../PinImg/PinImg";
 
 import styles from './style.module.css';
 
@@ -21,6 +22,11 @@ const slides = {
     },
 }
 
+const listOne = [
+    'Software Analysis',
+    'Workflow Analysis',
+    'Performance Analysis',
+]
 
 const listTwo = [
     'IT Strategy',
@@ -48,6 +54,7 @@ const LandingSlider = () => {
     );
 
     const settings = {
+        centerMode: false,
         adaptiveHeight: false,
         arrows: true,
         dots: false,
@@ -58,49 +65,29 @@ const LandingSlider = () => {
         slidesToScroll: 1,
         nextArrow: <ArrowNext />,
         prevArrow: <ArrowPrev />,
-        // autoplay: true,
-        // autoplaySpeed: 4000,
+        autoplay: true,
+        autoplaySpeed: 4000,
     };
 
     return (
         <section className={styles.landingSlider}>
+            <div className={styles.landingSliderSvgWrapper}>
+                <PinImg />
+                <PinImg heightOfEl={'67px'} />
+                <PinImg heightOfEl={'50px'} />
+                <PinImg />
+            </div>
             <ContentContainer>
                 <Slider {...settings}>
                     <div>
-                        <div>
-                            <h3>List1</h3>
-                            <ul>
-                                <li>One</li>
-                                <li>One</li>
-                                <li>One</li>
-                            </ul>
-                        </div>
+                        <SliderContent title={"IT CONSULTING SERVICES"} />
                     </div>
                     <div>
-                        <div>
-                            <h3>List2</h3>
-                            <ul>
-                                <li>Two</li>
-                                <li>Two</li>
-                                <li>Two</li>
-                            </ul>
-                        </div>
+                        <SliderContent title={"IT SERVICES"} />
                     </div>
-                    {/*<div>*/}
-                    {/*    <List title={'It system analysis'} items={listOne} />*/}
-                    {/*    <List title={'STRATEGIC PLANNING'} items={listTwo} />*/}
-                    {/*    <List title={'PERFORMANCE MANAGEMENT'} items={listThree} />*/}
-                    {/*</div>*/}
-                    {/*<div>*/}
-                    {/*    <List title={'It system analysis'} items={listOne} />*/}
-                    {/*    <List title={'STRATEGIC PLANNING'} items={listTwo} />*/}
-                    {/*    <List title={'PERFORMANCE MANAGEMENT'} items={listThree} />*/}
-                    {/*</div>*/}
-                    {/*<div>*/}
-                    {/*    <List title={'It system analysis'} items={listOne} />*/}
-                    {/*    <List title={'STRATEGIC PLANNING'} items={listTwo} />*/}
-                    {/*    <List title={'PERFORMANCE MANAGEMENT'} items={listThree} />*/}
-                    {/*</div>*/}
+                    <div>
+                        <SliderContent title={"IT CONSULTING SERVICES"} />
+                    </div>
                 </Slider>
             </ContentContainer>
         </section>
