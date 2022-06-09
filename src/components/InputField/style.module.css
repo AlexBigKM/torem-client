@@ -1,0 +1,30 @@
+.inputWrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 448px;
+    padding: 17px 0 17px 64px;
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    outline-color: #B8B8B8;
+    box-sizing: border-box;
+    font-family: "Roboto Light";
+    font-size: 16px;
+}
+
+.input::placeholder {
+    color: #B6B6B6;
+}
+
+.inputLine {
+    width: 1px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 51px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #EFEFEF;
+}
