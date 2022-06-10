@@ -1,27 +1,3 @@
-.homePageSmallHeader {
-  width: fit-content;
-  margin: 0 auto;
-  font-family: 'Roboto Thin';
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: 1em;
-  text-transform: lowercase;
-  color: #29A3FF;
-}
-
-.homePageHeader {
-  width: fit-content;
-  margin: 0 auto;
-  font-family: 'Nunito';
-  font-size: 96px;
-  line-height: 131px;
-  color: white;
-}
-
-.homePageLinkButton {
-  margin: 65px auto 0;
-}
-
 .homePageCardsWrapper {
   display: flex;
 }
@@ -40,8 +16,8 @@
 
 .inputWrapper {
   width: 924px;
-  height: 618px;
   padding: 71px 72px;
+  position: relative;
   background: #FFFFFF;
   box-shadow: 0px 15px 40px 10px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
@@ -64,8 +40,121 @@
 }
 
 .inputDescription {
-  margin-bottom: 35px;
+  margin-bottom: 23px;
   font-size: 16px;
   line-height: 40px;
   color: #000000;
+}
+
+.formButton {
+  color: #000000;
+  border-color: #B4286B;
+  transition: all 0.5s ease;
+}
+
+.formButton:hover {
+  color: #FFFFFF;
+}
+
+.formTextAreaWrapper {
+  width: 448px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.textAreaLine {
+  width: 1px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: 51px;
+  top: 18px;
+  background-color: #EFEFEF;
+}
+
+.formTextArea {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding: 8px 0 8px 64px;
+  border: 1px solid #F0F0F0;
+  border-radius: 6px;
+  resize: none;
+  font-family: "Roboto Light";
+  font-size: 16px;
+  line-height: 40px;
+  color: #000000;
+  outline-color: #B8B8B8;
+}
+
+.formTextArea::placeholder {
+  color: #B6B6B6;
+}
+
+.infoCard {
+  width: 447px;
+  max-height: 494px;
+  padding: 0 50px 55px;
+  position: absolute;
+  border-radius: 6px;
+  right: -238px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.animateCardWrapper {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.infoCardImgWrapper {
+  text-align: center;
+}
+
+.infoCardContentWrapper {
+  margin-top: 58px;
+}
+
+.infoCardContent {
+  margin-bottom: 43px;
+  display: flex;
+  align-items: flex-start;
+  color: #FFFFFF;
+  font-family: "Roboto Light";
+  font-size: 16px;
+  line-height: 25px;
+
+}
+
+.infoCardContentListAlign {
+  align-items: center;
+}
+
+.infoCardContentImgLoc {
+  margin-right: 11px;
+}
+
+.infoCardContentImgEmail {
+  margin-left: 3px;
+  margin-right: 17px;
+}
+
+.infoCardContentImgPhone {
+  margin-left: 8px;
+  margin-right: 19px;
+}
+
+.infoCardContentList {
+  list-style: none;
+}
+
+.infoCardContentSocialsWrapper {
+  display: flex;
+  margin-top: 10px;
+}
+
+.infoCardContentSocial:nth-child(2) {
+  margin: 0 10px;
 }

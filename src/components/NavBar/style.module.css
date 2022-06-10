@@ -18,6 +18,7 @@
 
 .navbarMenuList {
   display: flex;
+  position: relative;
   align-items: center;
   font-family: Roboto;
   font-size: 16px;
@@ -37,6 +38,37 @@
   margin-right: 53px;
   display: flex;
   align-items: center;
+}
+
+.animateNavBar {
+  position: absolute;
+  right: 0;
+  top: 70px;
+}
+
+.navbarAnimateMenuList {
+  width: 405px;
+  box-sizing: border-box;
+  padding: 18px 18px 36px 54px;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: #231136;
+  color: #FFFFFF;
+  font-family: "Roboto Light";
+  font-size: 16px;
+  line-height: 80px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.navbarAnimateMenuList > li:before {
+  content: "\2022";
+  font-weight: bold;
+  width: 1em;
+  margin-right: 23px;
+  color: #B4286B;
 }
 
 .navbarMenuListItemImg {

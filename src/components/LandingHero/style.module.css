@@ -1,0 +1,23 @@
+.homePageSmallHeader {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: 'Roboto Thin';
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 1em;
+    text-transform: lowercase;
+    color: #29A3FF;
+}
+
+.homePageHeader {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: 'Nunito';
+    font-size: 96px;
+    line-height: 131px;
+    color: white;
+}
+
+.homePageLinkButton {
+    margin: 65px auto 0;
+}
