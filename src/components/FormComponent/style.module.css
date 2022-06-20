@@ -1,0 +1,75 @@
+.inputWrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 448px;
+    padding: 17px 17px 17px 64px;
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    outline-color: #B8B8B8;
+    box-sizing: border-box;
+    font-family: "Roboto Light";
+    font-size: 16px;
+}
+
+.input::placeholder {
+    color: #B6B6B6;
+}
+
+.inputLine {
+    width: 1px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 51px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #EFEFEF;
+}
+
+.formTextAreaWrapper {
+    width: 448px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.textAreaLine {
+    width: 1px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: 51px;
+    top: 18px;
+    background-color: #EFEFEF;
+}
+
+.formTextArea {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    padding: 8px 0 8px 64px;
+    border: 1px solid #F0F0F0;
+    border-radius: 6px;
+    resize: none;
+    font-family: "Roboto Light";
+    font-size: 16px;
+    line-height: 40px;
+    color: #000000;
+    outline-color: #B8B8B8;
+}
+
+.formTextArea::placeholder {
+    color: #B6B6B6;
+}
+
+.formButton {
+    color: #000000;
+    border-color: #B4286B;
+    transition: all 0.5s ease;
+}
+
+.formButton:hover {
+    color: #FFFFFF;
+}

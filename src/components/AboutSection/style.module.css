@@ -29,3 +29,21 @@
 .homePageAboutUsText {
     width: 446px;
 }
+
+@media(max-width: 1630px) {
+    .homePageAboutUsImg {
+        left: -110px;
+    }
+}
+
+@media(max-width: 1390px) {
+    .homePageAboutUsImg {
+        left: -160px;
+    }
+}
+
+@media(max-width: 1300px) {
+    .homePageAboutUsImg {
+        display: none;
+    }
+}

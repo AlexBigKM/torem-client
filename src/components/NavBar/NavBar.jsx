@@ -22,24 +22,7 @@ const fadeInDown = {
     }
 }
 
-const translateIn = {
-    initial: {
-        x: '100vw',
-        opacity: 0,
-    },
-    animate: {
-        x: 0,
-        opacity: 1,
-    },
-    transition: {
-        duration: 3.5,
-        delay: 3.5,
-        ease: "easeOut",
-    }
-}
-
-
-const NavBar = () => {
+const NavBar = ({onClickContacts}) => {
     const [isShown, setIsShown] = useState(false);
     const refMenu = useRef();
 
@@ -68,13 +51,19 @@ const NavBar = () => {
                         Services
                         <img className={styles.navbarMenuListItemImg} src={dropDownArrow} alt={"Dropdown Arrow"}/>
                     </li>
-                    <li>
+                    <li onClick={onClickContacts}>
                         Contacts
                     </li>
                 </ul>
             </motion.div>
             {isShown &&
-                <motion.div  className={styles.animateNavBar} ref={refMenu} variants={translateIn} initial="initial" animate="animate">
+                <motion.div
+                    className={styles.animateNavBar}
+                    ref={refMenu}
+                    initial={{opacity: 0, x: 100}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{duration: 0.5, delay: 0, ease: "easeInOut",}}
+                >
                     <ul className={styles.navbarAnimateMenuList}>
                         <li>
                             Software development

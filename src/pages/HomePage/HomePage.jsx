@@ -1,22 +1,17 @@
 import React from 'react';
 import classNames from "classnames";
 import LandingHero from "../../components/LandingHero/LandingHero";
-import LinkButton from "../../components/LinkButton/LinkButton";
 import Headers from "../../components/Headers/Headers";
 import Card from "../../components/Card/Card";
 import LandingSlider from "../../components/LandingSlider/LandingSlider";
 import AboutSection from "../../components/AboutSection/AboutSection";
 import ContentContainer from "../../components/ContentContainer/ContentContainer";
-import InputField from "../../components/InputField/InputField";
 import infoCardBg from '../../assets/images/infocard-bg.jpg';
 import webDesignBg from '../../assets/images/webdesign-bg.jpg';
 import speaker from '../../assets/icons/speaker.svg';
 import gear from '../../assets/icons/gear.svg';
 import docs from '../../assets/icons/docs.svg';
 import lock from '../../assets/icons/lock.svg';
-import personIcon from '../../assets/icons/person.svg';
-import emailIcon from '../../assets/icons/email.svg';
-import penIcon from '../../assets/icons/pen.svg';
 import pinsIcon from '../../assets/icons/pins.svg';
 import location from '../../assets/icons/location.svg';
 import aEmail from '../../assets/icons/a-email.svg';
@@ -26,10 +21,10 @@ import facebook from '../../assets/icons/facebook.svg';
 import twitter from '../../assets/icons/twitter.svg';
 
 import styles from './style.module.css';
-import AnimationContainer from "../../components/AnimationContainer/AnimationContainer";
 import AnimationInView from "../../components/AnimationContainer/AnimationInView";
+import FormComponent from "../../components/FormComponent/FormComponent";
 
-const HomePage = () => {
+const HomePage = ({contactsRef}) => {
     return (
         <>
             <LandingHero />
@@ -81,51 +76,13 @@ const HomePage = () => {
                 columnOneText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
                 columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
             />
-            <section className={styles.homePageInputSectionWrapper}>
+            <section className={styles.homePageInputSectionWrapper} ref={contactsRef}>
                 <ContentContainer>
                         <div className={styles.inputWrapper}>
                             <Headers headerStyle={styles.inputHeader} children={'Get in Touch'} />
                             <span className={styles.inputLine} />
                             <div className={styles.inputDescription}>Feel free to drop us a form belong</div>
-                            <form>
-                                <InputField
-                                    inputWrapperStyle={styles.inputsWrapperClass}
-                                    icon={personIcon}
-                                    iconWidth={'16px'}
-                                    iconHeight={'16px'}
-                                    backgroundPositionY={'19px'}
-                                    inputType={'text'}
-                                    inputPlaceholder={'Name'}
-                                />
-                                <InputField
-                                    inputWrapperStyle={styles.inputsWrapperClass}
-                                    icon={emailIcon}
-                                    iconWidth={'17px'}
-                                    iconHeight={'12px'}
-                                    backgroundPositionY={'21px'}
-                                    inputType={'email'}
-                                    inputPlaceholder={'Your email'}
-                                />
-                                <div className={styles.formTextAreaWrapper}>
-                                    <span className={styles.textAreaLine} />
-                                    <textarea
-                                        className={styles.formTextArea}
-                                        style={{
-                                            background: `url(${penIcon}) no-repeat scroll 20px 20px`,
-                                            backgroundPosition: '22px center',
-                                            backgroundPositionY: '16px',
-                                        }}
-                                        name="textarea"
-                                        rows="2"
-                                        col="2"
-                                        placeholder="Ask your question"
-                                    />
-                                </div>
-                                <LinkButton
-                                    children={'Send a message'}
-                                    linkButtonStyle={styles.formButton}
-                                />
-                            </form>
+                            <FormComponent />
                             <AnimationInView inViewClassName={styles.animateCardWrapper}>
                             <div
                                 className={styles.infoCard}

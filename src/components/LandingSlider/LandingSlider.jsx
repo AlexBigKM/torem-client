@@ -9,36 +9,6 @@ import PinImg from "../PinImg/PinImg";
 
 import styles from './style.module.css';
 
-const slides = {
-    listOne: {
-        1: 'Software Analysis',
-        2: 'Workflow Analysis',
-        3: 'Performance Analysis',
-    },
-    listTwo: {
-        1: 'IT Strategy',
-        2: 'Digital Transformation',
-        3: 'Product Specifications',
-    },
-}
-
-const listOne = [
-    'Software Analysis',
-    'Workflow Analysis',
-    'Performance Analysis',
-]
-
-const listTwo = [
-    'IT Strategy',
-    'Digital Transformation',
-    'Product Specifications',
-]
-
-const listThree = [
-    'Software Tests',
-    'System Maintenance',
-]
-
 const LandingSlider = () => {
 
     const ArrowNext = ({onClick}) => (
