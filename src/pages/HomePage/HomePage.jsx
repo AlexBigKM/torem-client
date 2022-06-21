@@ -24,7 +24,7 @@ import styles from './style.module.css';
 import AnimationInView from "../../components/AnimationContainer/AnimationInView";
 import FormComponent from "../../components/FormComponent/FormComponent";
 
-const HomePage = ({contactsRef}) => {
+const HomePage = ({ contactsRef }) => {
     return (
         <>
             <LandingHero />
@@ -83,7 +83,7 @@ const HomePage = ({contactsRef}) => {
                             <span className={styles.inputLine} />
                             <div className={styles.inputDescription}>Feel free to drop us a form belong</div>
                             <FormComponent />
-                            <AnimationInView inViewClassName={styles.animateCardWrapper}>
+                            <AnimationInView inViewClassName={styles.animateCardWrapper} posY={0} startPosY={0}>
                             <div
                                 className={styles.infoCard}
                                 style={{
@@ -118,7 +118,7 @@ const HomePage = ({contactsRef}) => {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className={styles.infoCardContentSocialsWrapper}>
+                                <div className={styles.infoCardContentSocialsWrapper} style={{visibility: 'hidden'}}>
                                     <img className={styles.infoCardContentSocial} src={instagram} alt="Instagram" />
                                     <img className={styles.infoCardContentSocial} src={facebook} alt="Facebook" />
                                     <img className={styles.infoCardContentSocial} src={twitter} alt="Twitter" />

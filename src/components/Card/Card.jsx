@@ -12,7 +12,7 @@ const Card = ({ cardWrapperStyle, src, alt, title, text, buttonText }) => {
     return (
         <div className={classNames(styles.cardWrapper, cardWrapperStyle)} onMouseOver={() => setShowBtn(true)} onMouseOut={() => setShowBtn(false)}>
             <div className={styles.cardCircle}>
-                <AnimationInView>
+                <AnimationInView posY={0} startPosY={0}>
                     <img className={styles.cardCircleIcon} src={src} alt={alt} />
                 </AnimationInView>
             </div>

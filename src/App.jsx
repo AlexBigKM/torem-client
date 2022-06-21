@@ -7,16 +7,16 @@ import styles from './App.css';
 
 
 function App() {
-    let scrollToContacts = useRef(null);
+    let scrollToRef = useRef(null);
     const onClickScrollTo = () => {
-        scrollToContacts.current.scrollIntoView();
-        console.log(scrollToContacts)
+        scrollToRef.current.scrollIntoView();
+        console.log(scrollToRef)
     }
     return (
         <div className={styles.app}>
-            <NavBar onClickContacts={onClickScrollTo} />
-            <HomePage contactsRef={scrollToContacts} />
-            <Footer />
+            <NavBar onClickContacts={onClickScrollTo}/>
+            <HomePage contactsRef={scrollToRef}/>
+            <Footer/>
         </div>
     );
 }

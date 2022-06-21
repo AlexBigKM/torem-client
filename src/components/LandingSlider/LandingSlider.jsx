@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import PinImg from "../PinImg/PinImg";
 
 import styles from './style.module.css';
+import AnimationInView from "../AnimationContainer/AnimationInView";
 
 const LandingSlider = () => {
 
@@ -42,10 +43,18 @@ const LandingSlider = () => {
     return (
         <section className={styles.landingSlider}>
             <div className={styles.landingSliderSvgWrapper}>
-                <PinImg />
-                <PinImg heightOfEl={'67px'} />
-                <PinImg heightOfEl={'50px'} />
-                <PinImg />
+                <AnimationInView posY={0} startPosY={-100}>
+                    <PinImg />
+                </AnimationInView>
+                <AnimationInView animDuration={1}  posY={0} startPosY={-100}>
+                    <PinImg heightOfEl={'67px'} />
+                </AnimationInView>
+                <AnimationInView animDuration={1.3}  posY={0} startPosY={-100}>
+                    <PinImg heightOfEl={'50px'} />
+                </AnimationInView>
+                <AnimationInView  posY={0} startPosY={-100}>
+                    <PinImg />
+                </AnimationInView>
             </div>
             <ContentContainer>
                 <Slider {...settings}>

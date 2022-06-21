@@ -5,13 +5,13 @@ import classNames from "classnames";
 
 import styles from './style.module.css';
 
-const AnimationInView = ({ children, inViewClassName }) => {
+const AnimationInView = ({ children, inViewClassName, animDuration = 0.5, posY, startPosY }) => {
     const control = useAnimation();
     const [ref, inView] = useInView();
 
     const boxVariant = {
-        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-        hidden: { opacity: 0, scale: 0 }
+        visible: { opacity: 1, scale: 1, transition: { duration: animDuration }, y: posY },
+        hidden: { opacity: 0, scale: 0, y: startPosY }
     };
 
     useEffect(() => {
