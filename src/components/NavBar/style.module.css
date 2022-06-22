@@ -99,3 +99,20 @@
 .navbarMenuListItemImg {
   margin-left: 8px;
 }
+
+.navBurgerBtnWrapper {
+  display: none;
+}
+
+@media (max-width: 475px) {
+  .navbarWrapper {
+    display: none;
+  }
+
+  .navBurgerBtnWrapper {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+}

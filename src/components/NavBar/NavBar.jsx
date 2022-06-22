@@ -2,12 +2,14 @@ import React, {useEffect, useRef, useState} from 'react';
 import toremLogo from '../../assets/icons/logo.svg';
 import dropDownArrow from '../../assets/icons/dropdown-arrow.svg';
 import ContentContainer from "../ContentContainer/ContentContainer";
-import {motion} from "framer-motion";
+import {BurgerBtn} from "../BurgerBtn/BurgerBtn";
+import {motion, useCycle} from "framer-motion";
 
 import styles from './style.module.css';
 
 const NavBar = ({onClickContacts}) => {
     const [isShown, setIsShown] = useState(false);
+    const [isOpen, toggleOpen] = useCycle(false, true);
     const refMenu = useRef();
 
     useEffect(() => {
@@ -25,6 +27,13 @@ const NavBar = ({onClickContacts}) => {
 
     return (
         <ContentContainer containerStyle={styles.navBarContainer}>
+            <motion.div
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
+                className={styles.navBurgerBtnWrapper}
+            >
+                <BurgerBtn toggle={() => toggleOpen()} />
+            </motion.div>
             <div className={styles.navbarWrapper}>
                 <motion.div
                     initial={{x: -460, opacity: 0,}}

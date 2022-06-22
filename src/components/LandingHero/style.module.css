@@ -5,6 +5,7 @@
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 1em;
+    text-align: center;
     text-transform: lowercase;
     color: #29A3FF;
 }
@@ -20,4 +21,25 @@
 
 .homePageLinkButton {
     margin: 65px auto 0;
+}
+
+@media (max-width: 475px) {
+    .homePageSmallHeader {
+        line-height: 35px;
+    }
+
+    .homePageHeader {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 320px) {
+    .homePageSmallHeader {
+        line-height: 30px;
+        font-size: 17px;
+    }
+
+    .homePageHeader {
+        font-size: 70px;
+    }
 }
