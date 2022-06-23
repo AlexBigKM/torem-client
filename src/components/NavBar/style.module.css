@@ -117,14 +117,16 @@
   display: none;
 }
 
-@media (max-width: 475px) {
-  .navbarMenuList {
+@media (max-width: 480px) {
+  .navbarMenuListMotionWrapper {
     display: none;
   }
 
   .navbarWrapper {
     justify-content: center;
     top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .navbarBtnWrapper {

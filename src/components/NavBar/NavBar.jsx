@@ -57,6 +57,7 @@ const NavBar = ({onClickContacts}) => {
                         initial={{x: 460, opacity: 0,}}
                         animate={{x: 0, opacity: 1,}}
                         transition={{duration: 0.5, delay: 0.5, ease: "easeInOut",}}
+                        className={styles.navbarMenuListMotionWrapper}
                     >
                         <ul className={styles.navbarMenuList}>
                             <li>

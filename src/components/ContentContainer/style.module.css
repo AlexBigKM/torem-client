@@ -23,14 +23,15 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 480px) {
   .container {
-    max-width: 375px;
+    max-width: fit-content;
+    padding: 0 20px;
   }
 }
 
-@media (max-width: 375px) {
-  .container {
-    max-width: 300px;
-  }
-}
+/*@media (max-width: 375px) {*/
+/*  .container {*/
+/*    max-width: 300px;*/
+/*  }*/
+/*}*/
