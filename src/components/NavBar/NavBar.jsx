@@ -6,11 +6,13 @@ import {BurgerBtn} from "../BurgerBtn/BurgerBtn";
 import {motion, useCycle} from "framer-motion";
 
 import styles from './style.module.css';
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const NavBar = ({onClickContacts}) => {
     const [isShown, setIsShown] = useState(false);
     const [isOpen, toggleOpen] = useCycle(false, true);
     const refMenu = useRef();
+    const overlayRef = useRef();
 
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
@@ -23,71 +25,93 @@ const NavBar = ({onClickContacts}) => {
         if (refMenu.current && !refMenu.current.contains(e.target)) {
             setIsShown(false);
         }
+        if (overlayRef.current && !overlayRef.current.contains(e.target)) {
+            toggleOpen(false, false);
+        }
     };
 
+    // const handleClickOutsideOverlay = (e) => {
+    //     if (overlayRef.current && !overlayRef.current.contains(e.target)) {
+    //         toggleOpen(false,false);
+    //     }
+    // };
+
     return (
-        <ContentContainer containerStyle={styles.navBarContainer}>
+        <>
             <motion.div
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
-                className={styles.navBurgerBtnWrapper}
+                className={styles.navbarBtnWrapper}
             >
                 <BurgerBtn toggle={() => toggleOpen()} />
             </motion.div>
-            <div className={styles.navbarWrapper}>
+            <motion.div
+                initial={false}
+                animate={isOpen ? "open" : "closed"}
+                variants={{open: {opacity: 1, x: 0}, closed: {opacity: 0, x: "-100%"}}}
+                // transition={{duration: 0.5}}
+                className={styles.navBurgerOverlay}
+                ref={overlayRef}
+                onClick={handleClickOutsideOverlay}
+            >
+                <BurgerMenu />
+            </motion.div>
+            <ContentContainer containerStyle={styles.navBarContainer}>
+                <div className={styles.navbarWrapper}>
+                    <motion.div
+                        initial={{x: -460, opacity: 0,}}
+                        animate={{x: 0, opacity: 1,}}
+                        transition={{duration: 0.5, delay: 0.5, ease: "easeInOut",}}
+                    >
+                        <img className={styles.navbarLogo} src={toremLogo} alt={"Torem"}/>
+                    </motion.div>
+                    <motion.div
+                        initial={{x: 460, opacity: 0,}}
+                        animate={{x: 0, opacity: 1,}}
+                        transition={{duration: 0.5, delay: 0.5, ease: "easeInOut",}}
+                    >
+                        <ul className={styles.navbarMenuList}>
+                            <li>
+                                <a className={styles.navbarMenuListLink}>
+                                    Home
+                                </a>
+                            </li>
+                            <li onClick={() => setIsShown(!isShown)}>
+                                Services
+                                <img className={styles.navbarMenuListItemImg} src={dropDownArrow}
+                                     alt={"Dropdown Arrow"}/>
+                            </li>
+                            <li onClick={onClickContacts}>
+                                <a className={styles.navbarMenuListLink}>
+                                    Contacts
+                                </a>
+                            </li>
+                        </ul>
+                    </motion.div>
+                </div>
+                {isShown &&
                 <motion.div
-                    initial={{x: -460, opacity: 0,}}
-                    animate={{x: 0, opacity: 1,}}
-                    transition={{duration: 0.5, delay: 0.5, ease: "easeInOut",}}
+                    className={styles.animateNavBar}
+                    ref={refMenu}
+                    initial={{opacity: 0, x: 100}}
+                    animate={{opacity: 1, x: 0}}
+                    transition={{duration: 0.5, delay: 0, ease: "easeInOut",}}
                 >
-                    <img className={styles.navbarLogo} src={toremLogo} alt={"Torem"}/>
-                </motion.div>
-                <motion.div
-                    initial={{x: 460, opacity: 0,}}
-                    animate={{x: 0, opacity: 1,}}
-                    transition={{duration: 0.5, delay: 0.5, ease: "easeInOut",}}
-                >
-                    <ul className={styles.navbarMenuList}>
+                    <ul className={styles.navbarAnimateMenuList}>
                         <li>
-                            <a className={styles.navbarMenuListLink}>
-                                Home
-                            </a>
+                            Software development
                         </li>
-                        <li onClick={() => setIsShown(!isShown)}>
-                            Services
-                            <img className={styles.navbarMenuListItemImg} src={dropDownArrow} alt={"Dropdown Arrow"}/>
+                        <li>
+                            Web design
                         </li>
-                        <li onClick={onClickContacts}>
-                            <a className={styles.navbarMenuListLink}>
-                                Contacts
-                            </a>
+                        <li>
+                            IT Consultancy
                         </li>
                     </ul>
                 </motion.div>
-
-            </div>
-            {isShown &&
-            <motion.div
-                className={styles.animateNavBar}
-                ref={refMenu}
-                initial={{opacity: 0, x: 100}}
-                animate={{opacity: 1, x: 0}}
-                transition={{duration: 0.5, delay: 0, ease: "easeInOut",}}
-            >
-                <ul className={styles.navbarAnimateMenuList}>
-                    <li>
-                        Software development
-                    </li>
-                    <li>
-                        Web design
-                    </li>
-                    <li>
-                        IT Consultancy
-                    </li>
-                </ul>
-            </motion.div>
-            }
-        </ContentContainer>
+                }
+            </ContentContainer>
+        </>
     );
 };
 

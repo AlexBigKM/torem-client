@@ -100,19 +100,34 @@
   margin-left: 8px;
 }
 
-.navBurgerBtnWrapper {
+.navBurgerOverlay {
+  display: none;
+  width: 75%;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: rgba(34, 17, 59, 0.9);
+  box-shadow: 21px 2px 48px -1px rgba(0, 0, 0, 0.09);
+}
+
+.navbarBtnWrapper {
   display: none;
 }
 
 @media (max-width: 475px) {
-  .navbarWrapper {
+  .navbarMenuList {
     display: none;
   }
 
-  .navBurgerBtnWrapper {
-    display: block;
-    position: absolute;
+  .navbarWrapper {
+    justify-content: center;
     top: 40px;
-    left: 40px;
+  }
+
+  .navbarBtnWrapper {
+    display: block;
   }
 }

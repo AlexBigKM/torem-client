@@ -22,3 +22,15 @@
     max-width: 576px;
   }
 }
+
+@media (max-width: 425px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 300px;
+  }
+}

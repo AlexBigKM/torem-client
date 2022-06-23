@@ -1,5 +1,9 @@
 .burgerMenuBtn {
+    position: absolute;
+    top: 40px;
+    left: 40px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    z-index: 99;
 }
