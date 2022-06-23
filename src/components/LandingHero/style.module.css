@@ -31,6 +31,10 @@
     .homePageHeader {
         font-size: 70px;
     }
+
+    .homePageHeaderMotionWrapper {
+        margin-top: 80px;
+    }
 }
 
 @media (max-width: 320px) {

@@ -102,14 +102,14 @@
 
 .navBurgerOverlay {
   display: none;
-  width: 75%;
+  width: 100%;
   display: block;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   z-index: 10;
-  background-color: rgba(34, 17, 59, 0.9);
+  background-color: rgba(34, 17, 59, 0.97);
   box-shadow: 21px 2px 48px -1px rgba(0, 0, 0, 0.09);
 }
 

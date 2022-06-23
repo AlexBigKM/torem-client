@@ -10,9 +10,8 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 const NavBar = ({onClickContacts}) => {
     const [isShown, setIsShown] = useState(false);
-    const [isOpen, toggleOpen] = useCycle(false, true);
+    const [isOpen, toggle] = useCycle(false, true);
     const refMenu = useRef();
-    const overlayRef = useRef();
 
     useEffect(() => {
         document.addEventListener('mousedown', handleClickOutside);
@@ -25,16 +24,7 @@ const NavBar = ({onClickContacts}) => {
         if (refMenu.current && !refMenu.current.contains(e.target)) {
             setIsShown(false);
         }
-        if (overlayRef.current && !overlayRef.current.contains(e.target)) {
-            toggleOpen(false, false);
-        }
     };
-
-    // const handleClickOutsideOverlay = (e) => {
-    //     if (overlayRef.current && !overlayRef.current.contains(e.target)) {
-    //         toggleOpen(false,false);
-    //     }
-    // };
 
     return (
         <>
@@ -43,7 +33,7 @@ const NavBar = ({onClickContacts}) => {
                 animate={isOpen ? "open" : "closed"}
                 className={styles.navbarBtnWrapper}
             >
-                <BurgerBtn toggle={() => toggleOpen()} />
+                <BurgerBtn toggle={() => toggle()} />
             </motion.div>
             <motion.div
                 initial={false}
@@ -51,8 +41,6 @@ const NavBar = ({onClickContacts}) => {
                 variants={{open: {opacity: 1, x: 0}, closed: {opacity: 0, x: "-100%"}}}
                 // transition={{duration: 0.5}}
                 className={styles.navBurgerOverlay}
-                ref={overlayRef}
-                onClick={handleClickOutsideOverlay}
             >
                 <BurgerMenu />
             </motion.div>

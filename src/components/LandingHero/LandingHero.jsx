@@ -20,7 +20,7 @@ const sectionStyle = {
 const LandingHero = () => {
     return (
         <section className={styles.homePageHero} style={sectionStyle}>
-            <AnimationContainer yPos={-200} xPos={0}>
+            <AnimationContainer motionClassName={styles.homePageHeaderMotionWrapper} yPos={-200} xPos={0}>
                 <Headers headerStyle={styles.homePageSmallHeader} children={'Information technology'} />
                 <Headers headerStyle={styles.homePageHeader} children={'Torem'} />
             </AnimationContainer>
