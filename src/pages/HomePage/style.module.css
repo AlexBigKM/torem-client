@@ -113,3 +113,44 @@
 .infoCardContentSocial:nth-child(2) {
   margin: 0 10px;
 }
+
+@media (max-width: 1440px) {
+  .infoCard {
+    right: -130px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .homePageCardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .homePageInputSectionWrapper {
+    padding: 171px 0 490px 0;
+  }
+
+  .animateCardWrapper {
+    /*right: 0;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+  }
+
+  .inputWrapper {
+    width: 100%;
+  }
+
+  .infoCard {
+    /*top: unset;*/
+    /*right: 0;*/
+    /*left: 50%;*/
+    /*transform: translateX(-50%);*/
+  }
+}
+
+@media (max-width: 480px) {
+  .homePageCardsWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

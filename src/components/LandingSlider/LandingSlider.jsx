@@ -56,7 +56,7 @@ const LandingSlider = () => {
                     <PinImg />
                 </AnimationInView>
             </div>
-            <ContentContainer>
+            <ContentContainer containerStyle={styles.sliderContainer}>
                 <Slider {...settings}>
                     <div>
                         <SliderContent title={"IT CONSULTING SERVICES"} />

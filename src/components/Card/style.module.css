@@ -50,3 +50,28 @@
     line-height: 19px;
     color: #9F96AA;
 }
+
+.cardButton {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .cardWrapper {
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .cardWrapper {
+        padding: 73px 30px 0;
+    }
+
+    .cardButton {
+        display: block;
+    }
+
+    .cardButtonOnHover {
+        display: none;
+    }
+}

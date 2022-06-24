@@ -47,3 +47,22 @@
         display: none;
     }
 }
+
+@media(max-width: 480px) {
+    .homePageAboutUs {
+        padding: 60px 0;
+    }
+
+    .homePageAboutUsHeader {
+        text-align: center;
+    }
+
+    .homePageAboutUsTextWrapper {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .homePageAboutUsText {
+        width: 100%;
+    }
+}

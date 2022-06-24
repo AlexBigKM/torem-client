@@ -30,3 +30,37 @@
     color: #1D1D1D;
     list-style-position: inside;
 }
+
+@media (max-width: 768px) {
+    .contentWrapper {
+        display: flex;
+        column-gap: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contentWrapper {
+        flex-wrap: wrap;
+        column-gap: 10px;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    .contentTitle {
+        margin-bottom: 30px;
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .listTitle {
+        height: fit-content;
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 16px;
+        white-space: nowrap;
+    }
+
+    /*.listWrapper:nth-child(3) {*/
+    /*    margin-top: 50px;*/
+    /*}*/
+}

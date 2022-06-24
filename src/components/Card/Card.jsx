@@ -20,7 +20,8 @@ const Card = ({ cardWrapperStyle, src, alt, title, text, buttonText }) => {
             <div className={styles.cardText}>
                 {text}
             </div>
-            {showBtn && <LinkButton linkButtonStyle={styles.cardButton} children={buttonText} />}
+            {showBtn && <LinkButton linkButtonStyle={styles.cardButtonOnHover} children={buttonText} />}
+            <LinkButton linkButtonStyle={styles.cardButton} children={buttonText} />
         </div>
     );
 };

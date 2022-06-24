@@ -92,3 +92,23 @@ landingSliderImgLongPinTwo {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media (max-width: 1024px) {
+    .sliderContainer {
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .sliderContainer {
+        max-width: unset;
+    }
+
+    .landingSliderArrowBtnLeft {
+        display: none;
+    }
+
+    .landingSliderArrowBtnRight {
+        display: none;
+    }
+}
