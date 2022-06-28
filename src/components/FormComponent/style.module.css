@@ -1,10 +1,11 @@
 .inputWrapper {
+    width: 448px;
     position: relative;
     margin-bottom: 20px;
 }
 
 .input {
-    width: 448px;
+    width: 100%;
     padding: 17px 17px 17px 64px;
     border: 1px solid #F0F0F0;
     border-radius: 6px;
@@ -48,7 +49,6 @@
 .formTextArea {
     width: 100%;
     box-sizing: border-box;
-    display: block;
     padding: 8px 0 8px 64px;
     border: 1px solid #F0F0F0;
     border-radius: 6px;
@@ -72,4 +72,18 @@
 
 .formButton:hover {
     color: #FFFFFF;
+}
+
+@media (max-width: 480px) {
+    .inputWrapper {
+        width: 100%;
+    }
+
+    .formTextAreaWrapper {
+        width: 100%;
+    }
+
+    .formTextArea {
+        width: 100%;
+    }
 }

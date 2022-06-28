@@ -68,7 +68,7 @@
     }
 
     .cardButton {
-        display: block;
+        display: flex;
     }
 
     .cardButtonOnHover {
