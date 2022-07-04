@@ -7,10 +7,11 @@ import penIcon from "../../assets/icons/pen.svg";
 import styles from "./style.module.css";
 
 const FormComponent = () => {
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, reset} = useForm();
 
     const onSubmit = (data) => {
-        console.log(data)
+        console.log(data);
+        reset();
     }
 
     return (
@@ -23,9 +24,10 @@ const FormComponent = () => {
                            backgroundPosition: '22px center',
                            backgroundPositionY: '19px',
                        }}
-                       {...register("name", {
+                       {...register("firstName", {
                            required: true,
                        })}
+                       placeholder="Name"
                 />
             </div>
             <div className={styles.inputWrapper}>
@@ -39,10 +41,11 @@ const FormComponent = () => {
                        {...register("email", {
                            required: true,
                        })}
+                       placeholder="Your email"
                 />
             </div>
             <div className={styles.formTextAreaWrapper}>
-                <span className={styles.textAreaLine} />
+                <span className={styles.textAreaLine}/>
                 <textarea
                     className={styles.formTextArea}
                     style={{
@@ -50,7 +53,9 @@ const FormComponent = () => {
                         backgroundPosition: '22px center',
                         backgroundPositionY: '16px',
                     }}
-                    name="textarea"
+                    {...register("question", {
+                        required: true,
+                    })}
                     rows="2"
                     col="2"
                     placeholder="Ask your question"
