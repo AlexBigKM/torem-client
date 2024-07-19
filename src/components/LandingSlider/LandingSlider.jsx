@@ -1,26 +1,25 @@
 import React from 'react';
 import Slider from 'react-slick';
-import ContentContainer from "../ContentContainer/ContentContainer";
+import ContentContainer from '../ContentContainer/ContentContainer';
 import SliderContent from '../SliderContent/SliderContent';
 import arrow from '../../assets/icons/slider-arrow.svg';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import PinImg from "../PinImg/PinImg";
-
-import styles from './style.module.css';
-import AnimationInView from "../AnimationContainer/AnimationInView";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import PinImg from '../PinImg/PinImg';
+import AnimationInView from '../AnimationContainer/AnimationInView';
+import './styles.css';
 
 const LandingSlider = () => {
 
     const ArrowNext = ({onClick}) => (
-        <button className={styles.landingSliderArrowBtnRight} onClick={onClick}>
-            <img className={styles.landingSliderArrowNext} src={arrow} alt={"Next"} />
+        <button className='landingSliderArrowBtnRight' onClick={onClick}>
+            <img className='landingSliderArrowNext' src={arrow} alt={"Next"} />
         </button>
     );
 
     const ArrowPrev = ({onClick}) => (
-        <button className={styles.landingSliderArrowBtnLeft} onClick={onClick}>
-            <img className={styles.landingSliderArrowPrev} src={arrow} alt={"Prev"} />
+        <button className='landingSliderArrowBtnLeft' onClick={onClick}>
+            <img className='landingSliderArrowPrev' src={arrow} alt={"Prev"} />
         </button>
     );
 
@@ -41,8 +40,8 @@ const LandingSlider = () => {
     };
 
     return (
-        <section className={styles.landingSlider}>
-            <div className={styles.landingSliderSvgWrapper}>
+        <section className='landingSlider'>
+            <div className='landingSliderSvgWrapper'>
                 <AnimationInView posY={0} startPosY={-100}>
                     <PinImg />
                 </AnimationInView>
@@ -56,7 +55,7 @@ const LandingSlider = () => {
                     <PinImg />
                 </AnimationInView>
             </div>
-            <ContentContainer containerStyle={styles.sliderContainer}>
+            <ContentContainer containerStyle='sliderContainer'>
                 <Slider {...settings}>
                     <div>
                         <SliderContent title={"IT CONSULTING SERVICES"} />

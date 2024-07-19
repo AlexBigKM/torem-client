@@ -1,11 +1,11 @@
 import React from 'react';
-import classNames from "classnames";
-import LandingHero from "../../components/LandingHero/LandingHero";
-import Headers from "../../components/Headers/Headers";
-import Card from "../../components/Card/Card";
-import LandingSlider from "../../components/LandingSlider/LandingSlider";
-import AboutSection from "../../components/AboutSection/AboutSection";
-import ContentContainer from "../../components/ContentContainer/ContentContainer";
+import classNames from 'classnames';
+import LandingHero from '../../components/LandingHero/LandingHero';
+import Headers from '../../components/Headers/Headers';
+import Card from '../../components/Card/Card';
+import LandingSlider from '../../components/LandingSlider/LandingSlider';
+import AboutSection from '../../components/AboutSection/AboutSection';
+import ContentContainer from '../../components/ContentContainer/ContentContainer';
 import infoCardBg from '../../assets/images/infocard-bg.jpg';
 import webDesignBg from '../../assets/images/webdesign-bg.jpg';
 import speaker from '../../assets/icons/speaker.svg';
@@ -19,11 +19,10 @@ import phone from '../../assets/icons/phone.svg';
 import instagram from '../../assets/icons/instagram.svg';
 import facebook from '../../assets/icons/facebook.svg';
 import twitter from '../../assets/icons/twitter.svg';
-
-import styles from './style.module.css';
-import AnimationInView from "../../components/AnimationContainer/AnimationInView";
-import FormComponent from "../../components/FormComponent/FormComponent";
-import ContactCard from "../../components/ContactCard/ContactCard";
+import AnimationInView from '../../components/AnimationContainer/AnimationInView';
+import FormComponent from '../../components/FormComponent/FormComponent';
+import ContactCard from '../../components/ContactCard/ContactCard';
+import './styles.css';
 
 const HomePage = ({ contactsRef }) => {
     return (
@@ -34,9 +33,9 @@ const HomePage = ({ contactsRef }) => {
                 columnOneText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
                 columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
             />
-            <section className={styles.homePageCardsWrapper}>
+            <section className='homePageCardsWrapper'>
                 <Card
-                    cardWrapperStyle={styles.homePageCard}
+                    cardWrapperStyle='homePageCard'
                     src={speaker}
                     alt={'speaker'}
                     title={'Startup to Enterprise Solutions'}
@@ -44,7 +43,7 @@ const HomePage = ({ contactsRef }) => {
                     buttonText={'Learn more'}
                 />
                 <Card
-                    cardWrapperStyle={styles.homePageCard}
+                    cardWrapperStyle='homePageCard'
                     src={gear}
                     alt={'gear'}
                     title={'Disruptive Technologies'}
@@ -52,7 +51,7 @@ const HomePage = ({ contactsRef }) => {
                     buttonText={'Learn more'}
                 />
                 <Card
-                    cardWrapperStyle={styles.homePageCard}
+                    cardWrapperStyle='homePageCard'
                     src={docs}
                     alt={'docs'}
                     title={'Automated & Manual Quality Assurance'}
@@ -60,7 +59,7 @@ const HomePage = ({ contactsRef }) => {
                     buttonText={'Learn more'}
                 />
                 <Card
-                    cardWrapperStyle={styles.homePageCard}
+                    cardWrapperStyle='homePageCard'
                     src={lock}
                     alt={'lock'}
                     title={'Privacy Focussed'}
@@ -71,20 +70,20 @@ const HomePage = ({ contactsRef }) => {
             <LandingSlider />
             <AboutSection
                 backgroundImage={`url(${webDesignBg})`}
-                headerStyle={styles.webDesignHeaderStyle}
-                textStyle={styles.webDesignTextStyle}
+                headerStyle='webDesignHeaderStyle'
+                textStyle='webDesignTextStyle'
                 sectionTitle={'web design'}
                 columnOneText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
                 columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
             />
-            <section className={styles.homePageInputSectionWrapper} ref={contactsRef}>
-                <ContentContainer containerStyle={styles.homePageInputContainer}>
-                        <div className={styles.inputWrapper}>
-                            <Headers headerStyle={styles.inputHeader} children={'Get in Touch'} />
-                            <span className={styles.inputLine} />
-                            <div className={styles.inputDescription}>Feel free to drop us a form belong</div>
+            <section className='homePageInputSectionWrapper' ref={contactsRef}>
+                <ContentContainer containerStyle={'homePageInputContainer'}>
+                        <div className='inputsWrapper'>
+                            <Headers headerStyle='inputHeader' children={'Get in Touch'} />
+                            <span className='inputsWrapperLine' />
+                            <div className='inputDescription'>Feel free to drop us a form belong</div>
                             <FormComponent />
-                            <AnimationInView inViewClassName={styles.animateCardWrapper} posY={0} startPosY={0}>
+                            <AnimationInView inViewClassName='animateCardWrapper' posY={0} startPosY={0}>
                                 <ContactCard />
                             </AnimationInView>
                         </div>

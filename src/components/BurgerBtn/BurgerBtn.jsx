@@ -1,7 +1,6 @@
-import React from "react";
-import {motion} from "framer-motion";
-
-import styles from "./style.module.css";
+import React from 'react';
+import {motion} from 'framer-motion';
+import './styles.css';
 
 const Path = props => (
     <motion.path
@@ -14,7 +13,7 @@ const Path = props => (
 );
 
 export const BurgerBtn = ({toggle}) => (
-    <button className={styles.burgerMenuBtn} onClick={toggle}>
+    <button className='burgerMenuBtn' onClick={toggle}>
         <svg width="30" height="30" viewBox="0 0 23 23">
             <Path
                 variants={{

@@ -1,10 +1,9 @@
 import React from 'react';
-
-import styles from './style.module.css';
+import './styles.css';
 
 const BurgerMenu = () => {
     return (
-        <ul className={styles.burgerMenuList}>
+        <ul className='burgerMenuList'>
             <li>Home</li>
             <li>SOFTWARE DEVELOPMENT</li>
             <li>WEB DESIGN</li>

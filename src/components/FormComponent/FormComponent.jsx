@@ -1,10 +1,10 @@
 import React from 'react';
-import {useForm} from "react-hook-form";
-import LinkButton from "../LinkButton/LinkButton";
-import personIcon from "../../assets/icons/person.svg";
-import emailIcon from "../../assets/icons/email.svg";
-import penIcon from "../../assets/icons/pen.svg";
-import styles from "./style.module.css";
+import {useForm} from 'react-hook-form';
+import LinkButton from '../LinkButton/LinkButton';
+import personIcon from '../../assets/icons/person.svg';
+import emailIcon from '../../assets/icons/email.svg';
+import penIcon from '../../assets/icons/pen.svg';
+import './styles.css';
 
 const FormComponent = () => {
     const {register, handleSubmit, reset} = useForm();
@@ -16,9 +16,9 @@ const FormComponent = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div className={styles.inputWrapper}>
-                <span className={styles.inputLine}/>
-                <input className={styles.input}
+            <div className='inputWrapper'>
+                <span className='inputLine'/>
+                <input className='input'
                        style={{
                            background: `url(${personIcon}) no-repeat scroll 17px 12px`,
                            backgroundPosition: '22px center',
@@ -30,9 +30,9 @@ const FormComponent = () => {
                        placeholder="Name"
                 />
             </div>
-            <div className={styles.inputWrapper}>
-                <span className={styles.inputLine}/>
-                <input className={styles.input}
+            <div className='inputWrapper'>
+                <span className='inputLine'/>
+                <input className='input'
                        style={{
                            background: `url(${emailIcon}) no-repeat scroll 16px 16px`,
                            backgroundPosition: '22px center',
@@ -44,10 +44,10 @@ const FormComponent = () => {
                        placeholder="Your email"
                 />
             </div>
-            <div className={styles.formTextAreaWrapper}>
-                <span className={styles.textAreaLine}/>
+            <div className='formTextAreaWrapper'>
+                <span className='textAreaLine'/>
                 <textarea
-                    className={styles.formTextArea}
+                    className='formTextArea'
                     style={{
                         background: `url(${penIcon}) no-repeat scroll 20px 20px`,
                         backgroundPosition: '22px center',
@@ -64,7 +64,7 @@ const FormComponent = () => {
             <LinkButton
                 buttonType={'submit'}
                 children={'Send a message'}
-                linkButtonStyle={styles.formButton}
+                linkButtonStyle={'formButton'}
             />
         </form>
     );

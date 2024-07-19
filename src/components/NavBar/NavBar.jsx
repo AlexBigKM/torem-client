@@ -1,12 +1,11 @@
 import React, {useEffect, useRef, useState} from 'react';
 import toremLogo from '../../assets/icons/logo.svg';
 import dropDownArrow from '../../assets/icons/dropdown-arrow.svg';
-import ContentContainer from "../ContentContainer/ContentContainer";
-import {BurgerBtn} from "../BurgerBtn/BurgerBtn";
-import {motion, useCycle} from "framer-motion";
-
-import styles from './style.module.css';
-import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import ContentContainer from '../ContentContainer/ContentContainer';
+import {BurgerBtn} from '../BurgerBtn/BurgerBtn';
+import {motion, useCycle} from 'framer-motion';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
+import './styles.css';
 
 const NavBar = ({onClickContacts}) => {
     const [isShown, setIsShown] = useState(false);
@@ -31,7 +30,7 @@ const NavBar = ({onClickContacts}) => {
             <motion.div
                 initial={false}
                 animate={isOpen ? "open" : "closed"}
-                className={styles.navbarBtnWrapper}
+                className='navbarBtnWrapper'
             >
                 <BurgerBtn toggle={() => toggle()} />
             </motion.div>
@@ -40,38 +39,38 @@ const NavBar = ({onClickContacts}) => {
                 animate={isOpen ? "open" : "closed"}
                 variants={{open: {opacity: 1, x: 0}, closed: {opacity: 0, x: "-100%"}}}
                 // transition={{duration: 0.5}}
-                className={styles.navBurgerOverlay}
+                className='navBurgerOverlay'
             >
                 <BurgerMenu />
             </motion.div>
-            <ContentContainer containerStyle={styles.navBarContainer}>
-                <div className={styles.navbarWrapper}>
+            <ContentContainer containerStyle='navBarContainer'>
+                <div className='navbarWrapper'>
                     <motion.div
                         initial={{x: -460, opacity: 0,}}
                         animate={{x: 0, opacity: 1,}}
                         transition={{duration: 0.5, delay: 0.5, ease: "easeInOut",}}
                     >
-                        <img className={styles.navbarLogo} src={toremLogo} alt={"Torem"}/>
+                        <img className='navbarLogo' src={toremLogo} alt={"Torem"}/>
                     </motion.div>
                     <motion.div
                         initial={{x: 460, opacity: 0,}}
                         animate={{x: 0, opacity: 1,}}
                         transition={{duration: 0.5, delay: 0.5, ease: "easeInOut",}}
-                        className={styles.navbarMenuListMotionWrapper}
+                        className='navbarMenuListMotionWrapper'
                     >
-                        <ul className={styles.navbarMenuList}>
+                        <ul className='navbarMenuList'>
                             <li>
-                                <a className={styles.navbarMenuListLink}>
+                                <a className='navbarMenuListLink'>
                                     Home
                                 </a>
                             </li>
                             <li onClick={() => setIsShown(!isShown)}>
                                 Services
-                                <img className={styles.navbarMenuListItemImg} src={dropDownArrow}
+                                <img className='navbarMenuListItemImg' src={dropDownArrow}
                                      alt={"Dropdown Arrow"}/>
                             </li>
                             <li onClick={onClickContacts}>
-                                <a className={styles.navbarMenuListLink}>
+                                <a className='navbarMenuListLink'>
                                     Contacts
                                 </a>
                             </li>
@@ -80,13 +79,13 @@ const NavBar = ({onClickContacts}) => {
                 </div>
                 {isShown &&
                 <motion.div
-                    className={styles.animateNavBar}
+                    className='animateNavBar'
                     ref={refMenu}
                     initial={{opacity: 0, x: 100}}
                     animate={{opacity: 1, x: 0}}
                     transition={{duration: 0.5, delay: 0, ease: "easeInOut",}}
                 >
-                    <ul className={styles.navbarAnimateMenuList}>
+                    <ul className='navbarAnimateMenuList'>
                         <li>
                             Software development
                         </li>

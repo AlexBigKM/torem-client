@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from "classnames";
-
-import styles from './style.module.css';
+import './styles.css';
 
 const InputField = ({
                         inputWrapperStyle,
@@ -21,9 +20,9 @@ const InputField = ({
     }
 
     return (
-        <div className={classNames(styles.inputWrapper, inputWrapperStyle)}>
-            <span className={styles.inputLine}/>
-            <input className={styles.input} type={inputType} placeholder={inputPlaceholder} style={inputStyle}/>
+        <div className={classNames('inputWrapper', inputWrapperStyle)}>
+            <span className='inputLine'/>
+            <input className='input' type={inputType} placeholder={inputPlaceholder} style={inputStyle}/>
         </div>
 
     );

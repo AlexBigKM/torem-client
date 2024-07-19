@@ -1,9 +1,8 @@
 import React, {useEffect} from 'react';
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import classNames from "classnames";
-
-import styles from './style.module.css';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import classNames from 'classnames';
+import './styles.css';
 
 const AnimationInView = ({ children, inViewClassName, animDuration = 0.5, posY, startPosY }) => {
     const control = useAnimation();
@@ -23,7 +22,7 @@ const AnimationInView = ({ children, inViewClassName, animDuration = 0.5, posY, 
     }, [control, inView]);
 
     return (
-        <motion.div className={classNames(styles.inViewWrapper, inViewClassName)} variants={boxVariant} ref={ref} initial="hidden" animate={control}>
+        <motion.div className={classNames('inViewWrapper', inViewClassName)} variants={boxVariant} ref={ref} initial="hidden" animate={control}>
             {children}
         </motion.div>
     );

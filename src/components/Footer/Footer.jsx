@@ -1,9 +1,8 @@
 import React from 'react';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import logo from '../../assets/icons/footer-logo.svg';
-
-import styles from './style.module.css';
-import Headers from "../Headers/Headers";
+import Headers from '../Headers/Headers';
+import './styles.css';
 
 const Footer = () => {
 
@@ -14,26 +13,26 @@ const Footer = () => {
     }
 
     return (
-        <div className={styles.footerWrapper}>
+        <div className='footerWrapper'>
             <ContentContainer>
-                <div className={styles.footerList}>
-                    <div className={styles.footerListColumn}>
-                        <div  className={styles.footerListColumnItem}>home</div>
-                        <div  className={styles.footerListColumnItem}>services</div>
-                        <div  className={styles.footerListColumnItem}>contacts</div>
+                <div className='footerList'>
+                    <div className='footerListColumn'>
+                        <div  className='footerListColumnItem'>home</div>
+                        <div  className='footerListColumnItem'>services</div>
+                        <div  className='footerListColumnItem'>contacts</div>
                     </div>
-                    <div className={styles.footerListColumn}>
-                        <div  className={styles.footerListColumnItem}>Software Development</div>
-                        <div  className={styles.footerListColumnItem}>IT Consultancy</div>
-                        <div  className={styles.footerListColumnItem}>web design</div>
+                    <div className='footerListColumn'>
+                        <div  className='footerListColumnItem'>Software Development</div>
+                        <div  className='footerListColumnItem'>IT Consultancy</div>
+                        <div  className='footerListColumnItem'>web design</div>
                     </div>
-                    <div className={styles.footerListColumnLogo}>
-                        <img className={styles.footerListLogo} src={logo} alt={'Torem'}/>
-                        <Headers headerStyle={styles.footerListLogoName} children={'Torem'} />
-                        <Headers headerStyle={styles.footerListLogoDesc} children={'INFORMATION TECHNOLOGY'} />
+                    <div className='footerListColumnLogo'>
+                        <img className='footerListLogo' src={logo} alt={'Torem'}/>
+                        <Headers headerStyle={'footerListLogoName'} children={'Torem'} />
+                        <Headers headerStyle={'footerListLogoDesc'} children={'INFORMATION TECHNOLOGY'} />
                     </div>
                 </div>
-                <div className={styles.footerListRights}>
+                <div className={'footerListRights'}>
                     © {renderYear()}, Torem© All rights reserved
                 </div>
             </ContentContainer>
