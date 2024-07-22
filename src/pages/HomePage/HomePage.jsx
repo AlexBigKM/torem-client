@@ -25,6 +25,42 @@ import ContactCard from '../../components/ContactCard/ContactCard';
 import './styles.css';
 
 const HomePage = ({ contactsRef }) => {
+
+    const sectionCards = [
+        {
+            title: 'Startup to Enterprise Solutions',
+            text: 'It is a long established fact that a reader will be...',
+            buttonText: 'Learn more',
+            alt: 'speaker',
+            icon: speaker,
+            style: 'homePageCard',
+        },
+        {
+            title: 'Disruptive Technologies',
+            text: 'It is a long established fact that a reader will be...',
+            buttonText: 'Learn more',
+            alt: 'gear',
+            icon: gear,
+            style: 'homePageCard',
+        },
+        {
+            title: 'Automated & Manual Quality Assurance',
+            text: 'It is a long established fact that a reader will be...',
+            buttonText: 'Learn more',
+            alt: 'docs',
+            icon: docs,
+            style: 'homePageCard',
+        },
+        {
+            title: 'Privacy Focussed',
+            text: 'It is a long established fact that a reader will be...',
+            buttonText: 'Learn more',
+            alt: 'lock',
+            icon: lock,
+            style: 'homePageCard',
+        },
+    ];
+
     return (
         <>
             <LandingHero />
@@ -34,38 +70,16 @@ const HomePage = ({ contactsRef }) => {
                 columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
             />
             <section className='homePageCardsWrapper'>
-                <Card
-                    cardWrapperStyle='homePageCard'
-                    src={speaker}
-                    alt={'speaker'}
-                    title={'Startup to Enterprise Solutions'}
-                    text={'It is a long established fact that a reader will be...'}
-                    buttonText={'Learn more'}
+                {sectionCards.map((card) => (
+                    <Card
+                    cardWrapperStyle={card.style}
+                    src={card.icon}
+                    alt={card.alt}
+                    title={card.title}
+                    text={card.text}
+                    buttonText={card.buttonText}
                 />
-                <Card
-                    cardWrapperStyle='homePageCard'
-                    src={gear}
-                    alt={'gear'}
-                    title={'Disruptive Technologies'}
-                    text={'It is a long established fact that a reader will be...'}
-                    buttonText={'Learn more'}
-                />
-                <Card
-                    cardWrapperStyle='homePageCard'
-                    src={docs}
-                    alt={'docs'}
-                    title={'Automated & Manual Quality Assurance'}
-                    text={'It is a long established fact that a reader will be...'}
-                    buttonText={'Learn more'}
-                />
-                <Card
-                    cardWrapperStyle='homePageCard'
-                    src={lock}
-                    alt={'lock'}
-                    title={'Privacy Focussed'}
-                    text={'It is a long established fact that a reader will be...'}
-                    buttonText={'Learn more'}
-                />
+                ))}
             </section>
             <LandingSlider />
             <AboutSection
