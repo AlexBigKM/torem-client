@@ -11,6 +11,41 @@ import './styles.css';
 
 const LandingSlider = () => {
 
+    const animationElement = [
+        {
+            positionY: 0,
+            startPositionY: -100,
+        },
+        {
+            duration: 1,
+            positionY: 0,
+            startPositionY: -100,
+            elementHeight: '67px',
+        },
+        {
+            duration: 1.3,
+            positionY: 0,
+            startPositionY: -100,
+            elementHeight: '50px',
+        },
+        {
+            positionY: 0,
+            startPositionY: -100,
+        },
+    ];
+
+    const sliderContent = [
+        {
+            title: 'IT CONSULTING SERVICES',
+        },
+        {
+            title: 'IT SERVICES',
+        },
+        {
+            title: 'IT CONSULTING SERVICES',
+        },
+    ];
+
     const ArrowNext = ({onClick}) => (
         <button className='landingSliderArrowBtnRight' onClick={onClick}>
             <img className='landingSliderArrowNext' src={arrow} alt={"Next"} />
@@ -42,30 +77,19 @@ const LandingSlider = () => {
     return (
         <section className='landingSlider'>
             <div className='landingSliderSvgWrapper'>
-                <AnimationInView posY={0} startPosY={-100}>
-                    <PinImg />
-                </AnimationInView>
-                <AnimationInView animDuration={1}  posY={0} startPosY={-100}>
-                    <PinImg heightOfEl={'67px'} />
-                </AnimationInView>
-                <AnimationInView animDuration={1.3}  posY={0} startPosY={-100}>
-                    <PinImg heightOfEl={'50px'} />
-                </AnimationInView>
-                <AnimationInView  posY={0} startPosY={-100}>
-                    <PinImg />
-                </AnimationInView>
+                {animationElement.map((el, index) => (
+                    <AnimationInView key={index} animDuration={el.duration} posY={el.positionY} startPosY={el.startPositionY}>
+                        <PinImg heightOfEl={el.elementHeight} />
+                    </AnimationInView>
+                ))}
             </div>
             <ContentContainer containerStyle='sliderContainer'>
                 <Slider {...settings}>
-                    <div>
-                        <SliderContent title={"IT CONSULTING SERVICES"} />
-                    </div>
-                    <div>
-                        <SliderContent title={"IT SERVICES"} />
-                    </div>
-                    <div>
-                        <SliderContent title={"IT CONSULTING SERVICES"} />
-                    </div>
+                    {sliderContent.map((item, index) => (
+                        <div key={index}>
+                            <SliderContent title={item.title} />
+                        </div>
+                    ))}
                 </Slider>
             </ContentContainer>
         </section>

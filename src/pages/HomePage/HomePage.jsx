@@ -70,15 +70,16 @@ const HomePage = ({ contactsRef }) => {
                 columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
             />
             <section className='homePageCardsWrapper'>
-                {sectionCards.map((card) => (
+                {sectionCards.map((card, index) => (
                     <Card
-                    cardWrapperStyle={card.style}
-                    src={card.icon}
-                    alt={card.alt}
-                    title={card.title}
-                    text={card.text}
-                    buttonText={card.buttonText}
-                />
+                        key={index}
+                        cardWrapperStyle={card.style}
+                        src={card.icon}
+                        alt={card.alt}
+                        title={card.title}
+                        text={card.text}
+                        buttonText={card.buttonText}
+                    />
                 ))}
             </section>
             <LandingSlider />

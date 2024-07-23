@@ -78,7 +78,7 @@
     transform: translateX(-50%);
   }
 
-  .inputWrapper {
+  .inputsWrapper {
     width: 100%;
     position: unset;
   }
@@ -98,7 +98,7 @@
   .homePageInputContainer {
     max-width: 100%;
   }
-  .inputWrapper {
+  .inputsWrapper {
     width: 100%;
     padding: 71px 15px;
   }

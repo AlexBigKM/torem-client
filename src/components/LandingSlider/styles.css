@@ -46,8 +46,8 @@ landingSliderImgLongPinTwo {
     height: 48px;
     position: absolute;
     bottom: 112px;
-    left: 45%;
-    transform: translateX(-45%);
+    left: 47%;
+    transform: translateX(-47%);
     border-radius: 50%;
     border: 2px solid #D6D6D6;
     background-color: transparent;
@@ -61,8 +61,8 @@ landingSliderImgLongPinTwo {
     height: 48px;
     position: absolute;
     bottom: 112px;
-    right: 44%;
-    transform: translateX(-44%) rotate(180deg);
+    left: 53%;
+    transform: translateX(-53%) rotate(180deg);
     border-radius: 50%;
     border: 2px solid #D6D6D6;
     background-color: transparent;
