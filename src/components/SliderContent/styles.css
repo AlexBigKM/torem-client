@@ -31,7 +31,7 @@
     list-style-position: inside;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .contentWrapper {
         display: flex;
         column-gap: 35px;
@@ -59,8 +59,4 @@
         line-height: 16px;
         white-space: nowrap;
     }
-
-    /*.listWrapper:nth-child(3) {*/
-    /*    margin-top: 50px;*/
-    /*}*/
 }

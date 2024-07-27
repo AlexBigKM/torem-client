@@ -1,24 +1,15 @@
 import React from 'react';
-import classNames from 'classnames';
 import LandingHero from '../../components/LandingHero/LandingHero';
 import Headers from '../../components/Headers/Headers';
 import Card from '../../components/Card/Card';
 import LandingSlider from '../../components/LandingSlider/LandingSlider';
 import AboutSection from '../../components/AboutSection/AboutSection';
 import ContentContainer from '../../components/ContentContainer/ContentContainer';
-import infoCardBg from '../../assets/images/infocard-bg.jpg';
 import webDesignBg from '../../assets/images/webdesign-bg.jpg';
 import speaker from '../../assets/icons/speaker.svg';
 import gear from '../../assets/icons/gear.svg';
 import docs from '../../assets/icons/docs.svg';
 import lock from '../../assets/icons/lock.svg';
-import pinsIcon from '../../assets/icons/pins.svg';
-import location from '../../assets/icons/location.svg';
-import aEmail from '../../assets/icons/a-email.svg';
-import phone from '../../assets/icons/phone.svg';
-import instagram from '../../assets/icons/instagram.svg';
-import facebook from '../../assets/icons/facebook.svg';
-import twitter from '../../assets/icons/twitter.svg';
 import AnimationInView from '../../components/AnimationContainer/AnimationInView';
 import FormComponent from '../../components/FormComponent/FormComponent';
 import ContactCard from '../../components/ContactCard/ContactCard';
@@ -26,38 +17,60 @@ import './styles.css';
 
 const HomePage = ({ contactsRef }) => {
 
+    const renderCardText = (firstText, list = [], secondText) => {
+        if (firstText && list && !secondText) {
+            return (
+                <div>{firstText}</div>
+            )
+        }
+
+        if (firstText && list.length > 0 && secondText) {
+            return (
+                <>
+                    <div>{firstText}</div>
+                    <ul className="cardList">
+                        {list.map((item) => (
+                            <li>{item}</li>
+                        ))}
+                    </ul>
+                    <div>{secondText}</div>
+                </>
+            )
+        }
+    };
+
     const sectionCards = [
         {
             title: 'Startup to Enterprise Solutions',
-            text: 'It is a long established fact that a reader will be...',
+            text: renderCardText('We use specific and agile approaches to help Start-Ups transition into successful enterprises. Our Research and Development services assist in determining the most suitable technologies, libraries, and solutions for each unique case.'),
             buttonText: 'Learn more',
             alt: 'speaker',
             icon: speaker,
-            style: 'homePageCard',
         },
         {
             title: 'Disruptive Technologies',
-            text: 'It is a long established fact that a reader will be...',
+            text: renderCardText('We focus on a select range of programming languages, allowing us to gain deep experience, knowledge, and expertise in a specific stack. This approach enables us to deliver high-quality services tailored to different industries and in multiple ways. Our stack comprises Node.JS, Express.JS, Rabbit MQ, React.JS, Sequelize, Appolo Graphql and Material UI.'),
             buttonText: 'Learn more',
             alt: 'gear',
             icon: gear,
-            style: 'homePageCard',
         },
         {
             title: 'Automated & Manual Quality Assurance',
-            text: 'It is a long established fact that a reader will be...',
+            text: renderCardText('Software testing is an essential component of our development process. All software and applications are meticulously examined through a combination of manual and automated tests. Our testing specialists employ cutting-edge and innovative methodologies to ensure the delivery of high-quality results.'),
             buttonText: 'Learn more',
             alt: 'docs',
             icon: docs,
-            style: 'homePageCard',
         },
         {
             title: 'Privacy Focussed',
-            text: 'It is a long established fact that a reader will be...',
+            text: renderCardText(
+                'One of our core values it\'s Privacy focus. We do realize that it\'s very sensitive and specific point, so we protect all our client\'s data:',
+                    ['Information privacy', 'Communication privacy', 'Individual privacy'],
+                'This commitment extends to ensuring the confidentiality, integrity, and availability of client information throughout our engagement. We implement state-of-the-art security measures, including encryption, secure access controls, and regular security audits, to safeguard against unauthorized access and data breaches.'
+                ),
             buttonText: 'Learn more',
             alt: 'lock',
             icon: lock,
-            style: 'homePageCard',
         },
     ];
 
@@ -66,14 +79,13 @@ const HomePage = ({ contactsRef }) => {
             <LandingHero />
             <AboutSection
                 sectionTitle={'About us'}
-                columnOneText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
-                columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
+                columnOneText={'We are a software development team based in Ukraine, with experience that extends beyond our borders. Our expertise includes Automotive, Real Estate, SaaS, E-commerce and Blockchain development.'}
+                columnTwoText={'We provide comprehensive software development services, from product planning to ongoing support. We have a passion for working with both Start-Ups and large companies worldwide. Our wide-ranging experience in various industries can be valuable and beneficial for your specific idea.'}
             />
             <section className='homePageCardsWrapper'>
                 {sectionCards.map((card, index) => (
                     <Card
                         key={index}
-                        cardWrapperStyle={card.style}
                         src={card.icon}
                         alt={card.alt}
                         title={card.title}
@@ -88,8 +100,8 @@ const HomePage = ({ contactsRef }) => {
                 headerStyle='webDesignHeaderStyle'
                 textStyle='webDesignTextStyle'
                 sectionTitle={'web design'}
-                columnOneText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
-                columnTwoText={'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters'}
+                columnOneText={'It is widely acknowledged that every project begins with an idea. Yet, the crucial next step is invariably the design. Design embodies the concept, product, and essence of your project. To say it plainly, design is equally as critical as web development.'}
+                columnTwoText={'Our team customizes our web design services to meet the distinct requirements of your company. This customization allows every aspect of our services to align with your company\'s products, services, and objectives. The outcome is a website that not only resonates with your brand but is also cherished by your visitors.'}
             />
             <section className='homePageInputSectionWrapper' ref={contactsRef}>
                 <ContentContainer containerStyle={'homePageInputContainer'}>
