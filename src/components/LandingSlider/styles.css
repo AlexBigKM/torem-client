@@ -93,6 +93,16 @@ landingSliderImgLongPinTwo {
     transform: translate(-50%, -50%);
 }
 
+@media (max-width: 1080px) {
+    .landingSliderArrowBtnLeft {
+        left: 45%;
+    }
+
+    .landingSliderArrowBtnRight {
+        left: 55%;
+    }
+}
+
 @media (max-width: 1024px) {
     .sliderContainer {
         max-width: none;

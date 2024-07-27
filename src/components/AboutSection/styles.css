@@ -48,6 +48,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .homePageAboutUsTextWrapper {
+        column-gap: 60px;
+    }
+}
+
 @media(max-width: 480px) {
     .homePageAboutUs {
         padding: 60px 0;
